@@ -306,6 +306,7 @@ static void msm_restart_prepare(const char *cmd)
 			 /* force cold reboot */
 			qpnp_pon_system_pwr_off(PON_POWER_OFF_HARD_RESET);
 		} else {
+			qpnp_pon_set_restart_reason(PON_RESTART_REASON_UNKNOWN);
 			__raw_writel(0x77665501, restart_reason);
 		}
 	} else if (in_panic == 1) {
