@@ -407,8 +407,6 @@ struct stml0xx_data {
 #ifdef CONFIG_MMI_HALL_NOTIFICATIONS
 	struct mmi_hall_data *hall_data;
 #endif
-
-	struct led_classdev led_cdev;
 };
 
 #ifndef ts_to_ns
